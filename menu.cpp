@@ -97,9 +97,9 @@ void Pesanan::hapusPesanan(int kodeMakanan) {
     string namaMakanan = listMakanan.getNamaMakanan(kodeMakanan);
     if (it != daftarPesanan.end()) {
         daftarPesanan.erase(it);
-        cout << "Pesanan " << namaMakanan << " telah dihapus." << endl;
+        cout << "       Pesanan " << namaMakanan << " telah dihapus." << endl;
     } else {
-        cout << "Pesanan " << namaMakanan << " tidak ditemukan." << endl;
+        cout << "       Pesanan " << namaMakanan << " tidak ditemukan." << endl;
     }
 }
 
@@ -115,8 +115,8 @@ int Pesanan::hitungTotalHarga(){
 }
 
 void Pesanan::tampilkanPesanan() {
-    cout << "Pesanan untuk " << nama << endl;
-    cout << "Daftar Pesanan:" << endl;
+    cout << "       Pesanan untuk " << nama << endl;
+    cout << "       Daftar Pesanan:" << endl;
     for (const auto& pesanan : daftarPesanan) {
         int kodeMakanan = pesanan.first;
         int kuantitas = pesanan.second;
@@ -124,7 +124,7 @@ void Pesanan::tampilkanPesanan() {
         int hargaMakanan = listMakanan.getHargaMakanan(kodeMakanan);
         int kode = listMakanan.getKodeMakanan(namaMakanan);
 
-        cout << "Kode Menu: " << kode << ", Nama: " << namaMakanan << ", Kuantitas: " << kuantitas
+        cout << "       Kode Menu: " << kode << ", Nama: " << namaMakanan << ", Kuantitas: " << kuantitas
              << ", Harga: Rp" << (hargaMakanan * kuantitas) << endl;
     }
 }
