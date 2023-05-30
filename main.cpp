@@ -14,6 +14,8 @@ int main()
     QueueLagu lagu;
     int cmd;
     int i = 1;
+
+    lagu.beginSong();
     awal:
     int nomor;
     int jumlah;
@@ -23,7 +25,6 @@ int main()
     int choice;
     
     menuUtama();
-    lagu.beginSong();
     cout << "\x1b[38;5;228m";
     do{
         cout << "\n\n      ~ Pilih Nomor : ";

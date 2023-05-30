@@ -75,6 +75,7 @@ using namespace std;
 
             PlaySoundW(wideFileName.c_str(), NULL, SND_FILENAME | SND_ASYNC);
 
+
             cout << "      | Memutar lagu: " << lagu.judul << " - " << lagu.artis << endl;
             cout << "      //-----------------------------------------------------------------------------------------------------------------------\\\\";
         } else {
@@ -85,16 +86,23 @@ using namespace std;
     }
 
     void QueueLagu::beginSong(){
-            string file = "lagu1.wav";
+            string file = "lagu17.wav";
 
             wstring wideFileName(file.begin(), file.end());
 
             PlaySoundW(wideFileName.c_str(), NULL, SND_FILENAME | SND_ASYNC);
+
+
     }
 
 
 
     void QueueLagu::addSong(){
-        enqueue("Testing", "Gaada", "lagu1.wav");
-        enqueue("Weebs", "Siapa hayo", "blends.wav");
+    enqueue("From Now On", "Kim Min Seung", "lagu2.wav");
+    enqueue("Gyutto", "Mosawo", "lagu4.wav");
+    enqueue("Jadi Kekasihku Saja", "Keisya Levronka", "lagu19.wav");
+    enqueue("Mesin Waktu", "Budi Doremi", "lagu9.wav");
+    enqueue("Muak", "Aruma", "lagu10.wav");
+    enqueue("Tertawan Hati", "Awdella", "lagu14.wav");
+    enqueue("Yoru ni Kakeru (piano)", "YOASOBI", "lagu17.wav");
     }
