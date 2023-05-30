@@ -226,7 +226,6 @@ int main()
                     cout << "      Kembali ke Menu Utama? (Y/N)\n";
                     cout <<"      ~ Pilihan Anda: ";
                     cin >> order;
-                    cin >> order;
                     
                     if (order == 'y' || order == 'Y'){
                         system("cls");
