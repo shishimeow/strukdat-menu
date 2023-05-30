@@ -1,3 +1,3 @@
-# strukdat-menu
+# Implementasi Struktur Data Terhadap Sistem Pemesanan Menu
 
-Memenuhi proyek akhir mata kuliah Struktur Data
+Proyek akhir mata kuliah Struktur Data
