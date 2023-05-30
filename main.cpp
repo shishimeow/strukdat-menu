@@ -72,22 +72,34 @@ int main()
                                 break;
 
                         case 2: system("cls");
-                                banner();
+                                invoice();
                                 cout << "\x1b[38;5;228m";
                                 cout << "\n\n";
-                                pesanan.tampilkanPesanan();
+                                pesanan.tampilkanInvoice();
                                 third:
+                                cout << "\x1b[38;5;85m"; 
+                                cout << R"(       \\-----------------------------------------------------------------------------------------------------------------------//)";
+                                cout << "\n";
+                                cout << "\x1b[38;5;228m";
                                 cout << "\n       Kode Menu yang Akan Dihapus : ";
                                 cin >> nomor;
                                 pesanan.hapusPesanan(nomor);
-                                cout << "       --------------------------------------------------------\n";
-                                pesanan.tampilkanPesanan();
+                                cout << "\n";
+                                cout << "\x1b[38;5;85m"; 
+                                cout << R"(       \\-----------------------------------------------------------------------------------------------------------------------//)";
+                                cout << "\n";
+                                cout << "\x1b[38;5;228m";
+                                pesanan.tampilkanInvoice();
+                                cout << "\x1b[38;5;85m"; 
+                                cout << R"(       \\-----------------------------------------------------------------------------------------------------------------------//)";
                     
-                                cout << "\n       Apakah ada menu lain yang ingin dihapus? (Y/N)\n";
+                                cout << "\x1b[38;5;228m";
+                                cout << "\n\n       Apakah ada menu lain yang ingin dihapus? (Y/N)\n";
                                 cout << "        ~ Pilihan Anda: ";
                                 cin >> order;
 
                                 if (order == 'y' | order == 'Y'){
+                                    cout << "\n";
                                     goto third;
                                 } else if (order == 'n' | order == 'N'){
                                     system("cls");
@@ -98,11 +110,18 @@ int main()
                                 break;
 
                         case 3: system("cls");
-                                banner();
+                                invoice();
                                 cout << "\x1b[38;5;228m";
                                 cout << "\n\n";
-                                pesanan.tampilkanPesanan();
-                                cout << "       Total Pembayaran Anda: Rp" << pesanan.hitungTotalHarga() << endl;
+                                pesanan.tampilkanInvoice();
+                                cout << "                               TAKE-OUT TOTAL                                                      " << pesanan.hitungTotalHarga() << endl;
+
+                                cout << "\x1b[38;5;85m";    
+                                cout << "\n";
+                                cout << R"(       \\-----------------------------------------------------------------------------------------------------------------------//)";
+
+                                cout << "\n\n";
+                                cout << "\x1b[38;5;228m";
                                 cout << "\n       Ketik 'Y' untuk kembali ke Menu Utama\n";
                                 cout << "       Ketik 'B' untuk kembali ke Rincian Menu\n";
                                 cout << "       ~ Pilihan Anda: ";
@@ -146,12 +165,16 @@ int main()
                     }
 
             case 2 : system("cls");
-                    banner();
+                    antrianBanyak();
                     cout << "\x1b[38;5;228m";
-                    cout << "\n       Banyak Antrian Saat Ini: " << antrian.size()<< endl;
-                    cout << "\n";
+                    cout << "\n\n\n       Banyak Antrian Saat Ini: " << antrian.size()<< endl;
+                    cout << "\n\n";
+                    cout << "\x1b[38;5;85m";    
+                    cout << R"(       \\-----------------------------------------------------------------------------------------------------------------------//)";
+                    cout << "\n\n";
 
                     option:
+                    cout << "\x1b[38;5;228m";
                     cout << "       Kembali ke Menu Utama? (Y/N)\n";
                     cout <<"       ~ Pilihan Anda: ";
                     cin >> order;
@@ -160,7 +183,7 @@ int main()
                         system("cls");
                         goto awal;
                     } else if (order == 'n' || order == 'N'){
-                        cout << "\n       --------------------------------------------------------\n";
+                        cout << "\n       --------------------------------------------------------\n\n";
                         goto option;
                     } system("cls"); 
                     thankYou();

@@ -9,5 +9,7 @@ void opsiMenu();
 void error();
 void banner();
 void thankYou();
+void invoice();
+void antrianBanyak();
 
 #endif

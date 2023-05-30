@@ -33,6 +33,7 @@ class Pesanan{
         void hapusPesanan(int kodeMakanan);
         int hitungTotalHarga();
         void tampilkanPesanan();
+        void tampilkanInvoice();
 };
 
 #endif

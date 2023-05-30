@@ -129,3 +129,22 @@ void Pesanan::tampilkanPesanan() {
     }
 }
 
+void Pesanan::tampilkanInvoice(){
+    cout << "\n"; 
+    cout << "                               PESANAN ATAS NAMA       : " << nama << endl;
+    cout << "\n";
+    cout << "                               KUANTITAS | MENU (KODE) | TOTAL\n\n";
+
+    for (const auto& pesanan : daftarPesanan) {
+        int kodeMakanan = pesanan.first;
+        int kuantitas = pesanan.second;
+        string namaMakanan = listMakanan.getNamaMakanan(kodeMakanan);
+        int hargaMakanan = listMakanan.getHargaMakanan(kodeMakanan);
+        int kode = listMakanan.getKodeMakanan(namaMakanan);
+
+    cout << "                                          " << kuantitas << " | " << namaMakanan << " (" << kode << ") | Rp" << hargaMakanan * kuantitas << endl;
+    }
+
+    cout << "\n";
+    cout << "                               ===============================================================================\n\n";
+}
