@@ -44,7 +44,7 @@ int main()
                                 i++;
                                 cout << "       --------------------------------------------------------\n";
                                 cout << "       Nomor Antrian Anda : " << antrian.last() << endl;
-                                cout << "       Nama Pemesan       : ";
+                                cout << "       Nama Pemesan (Masukkan Satu Kata)   : ";
                                 cin >> name;
                                 pesanan.setNama(name);
 
