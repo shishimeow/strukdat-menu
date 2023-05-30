@@ -190,6 +190,8 @@ int main()
                     break;
 
             case 4 : system("cls");
+                thankYou();
+                Sleep(3000);
                 exit(1);
 
             default: system("cls");
