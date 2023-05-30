@@ -31,17 +31,11 @@ private:
 
 public:
     QueueLagu();
-
     bool isEmpty() const;
-
     void enqueue(const string& judul, const string& artis, const string& path);
-
     void dequeue();
-
     void playSong();
-
     void addSong();
-
     void beginSong();
 };
 
