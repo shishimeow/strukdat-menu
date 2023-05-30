@@ -192,7 +192,7 @@ int main()
 
             case 3 : lagu:
                      system("cls");
-                     banner();
+                     laguTampilan();
                      lagu.playSong();
 
                     cout << "\x1b[38;5;228m";

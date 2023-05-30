@@ -131,6 +131,7 @@ void Pesanan::tampilkanPesanan() {
 
 void Pesanan::tampilkanInvoice(){
     cout << "\n"; 
+    cout << "                               ===============================================================================\n\n";
     cout << "                               PESANAN ATAS NAMA       : " << nama << endl;
     cout << "\n";
     cout << "                               KUANTITAS | MENU (KODE) | TOTAL\n\n";

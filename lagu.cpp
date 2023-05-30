@@ -48,19 +48,20 @@ using namespace std;
         int choice;
         cout << "\x1b[38;5;228m";
         cout << "\n";
-        cout << "      |" << endl;
-        cout << "      | Daftar Lagu:\n";
+        cout << "      " << endl;
+        cout << "       Daftar Lagu:\n";
 
         int index = 1;
         Node* current = front;
         while (current != nullptr) {
-            cout << "      | " << index << ". " << current->lagu.judul << " - " << current->lagu.artis << endl;
+            cout << "       " << index << ". " << current->lagu.judul << " - " << current->lagu.artis << endl;
             current = current->next;
             index++;
         }
+        cout << "\n";
         cout << "      //-----------------------------------------------------------------------------------------------------------------------\\\\";
         cout << "\n";
-        cout << "      | Pilih lagu yang ingin diputar (masukkan nomor): ";
+        cout << "       Pilih lagu yang ingin diputar (masukkan nomor): ";
         cin >> choice;
 
         if (choice >= 1 && choice <= index) {
@@ -76,10 +77,10 @@ using namespace std;
             PlaySoundW(wideFileName.c_str(), NULL, SND_FILENAME | SND_ASYNC);
 
 
-            cout << "      | Memutar lagu: " << lagu.judul << " - " << lagu.artis << endl;
+            cout << "       Memutar lagu: " << lagu.judul << " - " << lagu.artis << endl;
             cout << "      //-----------------------------------------------------------------------------------------------------------------------\\\\";
         } else {
-            cout << "      | Pilihan lagu tidak valid." << endl;
+            cout << "       Pilihan lagu tidak valid." << endl;
         }
         cout << "\x1B[0m";
     }

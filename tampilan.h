@@ -11,5 +11,6 @@ void banner();
 void thankYou();
 void invoice();
 void antrianBanyak();
+void laguTampilan();
 
 #endif
